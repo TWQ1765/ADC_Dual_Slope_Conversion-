@@ -1,0 +1,34 @@
+---
+:source:
+  :path: test
+  :file: test_DualSlopeADC_test.c
+:successes:
+- :test: test_bar_graph_100_percent_all_on
+  :line: 20
+  :message: ''
+- :test: test_bar_graph_0_percent_all_off
+  :line: 30
+  :message: ''
+- :test: test_bar_graph_0_percent2_all_off
+  :line: 43
+  :message: ''
+- :test: test_bar_graph_25_percent2_one_on
+  :line: 53
+  :message: ''
+- :test: test_bar_graph_50_percent2_two_on
+  :line: 63
+  :message: ''
+- :test: test_bar_graph_75_percent2_tree_on
+  :line: 73
+  :message: ''
+- :test: test_bar_graph_75_percent2_all_on
+  :line: 82
+  :message: ''
+:failures: []
+:ignores: []
+:counts:
+  :total: 7
+  :passed: 7
+  :failed: 0
+  :ignored: 0
+:stdout: []

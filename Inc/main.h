@@ -32,7 +32,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+void led_turn_off(uint8_t index);
+void led_turn_on(uint8_t index);
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

@@ -20,10 +20,10 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "led.h"
+#include "bar_graph.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

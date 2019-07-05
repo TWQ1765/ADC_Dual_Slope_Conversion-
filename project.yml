@@ -31,7 +31,6 @@
     - -:test/support
   :source:
     - src/**
-    # added
     - inc/**    
   :support:
     - test/support
