@@ -1,0 +1,2 @@
+bar_graph.c:9:6:bar_graph_set_percent	16	static
+bar_graph.c:53:6:bar_graph_set_percent2	24	static

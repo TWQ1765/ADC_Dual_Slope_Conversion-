@@ -1,20 +1,19 @@
 #include "unity.h"
-//#include "DualSlopeADC_test.h"
-//#include "main.h"
-//#include "mock_stm32f1xx_hal.h"
+
 #include "bar_graph.h"
 #include "mock_led.h" //mock led.h file
-
+//#include "stm32f1xx_hal_conf.h"
+//#include "mock_stm32f1xx_it.h"
 void setUp(void)
 {}
 
 void tearDown(void)
 {}
 
-  void xtest_DualSlopeADC_test_NeedToImplement(void)
-  {
-      TEST_IGNORE_MESSAGE("Need to Implement DualSlopeADC_test");
-  }
+void xtest_DualSlopeADC_test_NeedToImplement(void)
+{
+    TEST_IGNORE_MESSAGE("Need to Implement DualSlopeADC_test");
+}
 
 
 void test_bar_graph_100_percent_all_on(void)
@@ -79,7 +78,7 @@ void test_bar_graph_75_percent2_tree_on(void)
 
     bar_graph_set_percent2(75);
 }
-void test_bar_graph_75_percent2_all_on(void)
+void test_bar_graph_100_percent2_all_on(void)
 {
     led_turn_on_Expect(0);
     led_turn_on_Expect(1);

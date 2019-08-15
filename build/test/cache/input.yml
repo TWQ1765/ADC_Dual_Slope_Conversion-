@@ -24,6 +24,9 @@
   :source:
   - src/**
   - inc/**
+  - Drivers/**
+  - Debug/**
+  - Startup/**
   :support:
   - test/support
   :include: []

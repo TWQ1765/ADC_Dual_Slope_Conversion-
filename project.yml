@@ -31,7 +31,10 @@
     - -:test/support
   :source:
     - src/**
-    - inc/**    
+    - inc/**
+    - Drivers/**
+    - Debug/**
+    - Startup/**    
   :support:
     - test/support
 

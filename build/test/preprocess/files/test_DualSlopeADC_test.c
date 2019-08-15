@@ -8,8 +8,6 @@
 
 
 
-
-
 void setUp(void)
 
 {}
@@ -22,13 +20,13 @@ void tearDown(void)
 
 
 
-  void xtest_DualSlopeADC_test_NeedToImplement(void)
+void xtest_DualSlopeADC_test_NeedToImplement(void)
 
-  {
+{
 
-      UnityIgnore( (("Need to Implement DualSlopeADC_test")), (UNITY_UINT)(16));
+    UnityIgnore( (("Need to Implement DualSlopeADC_test")), (UNITY_UINT)(15));
 
-  }
+}
 
 
 
@@ -38,13 +36,13 @@ void test_bar_graph_100_percent_all_on(void)
 
 {
 
-    led_turn_on_CMockExpect(22, 0);
+    led_turn_on_CMockExpect(21, 0);
 
-    led_turn_on_CMockExpect(23, 1);
+    led_turn_on_CMockExpect(22, 1);
 
-    led_turn_on_CMockExpect(24, 2);
+    led_turn_on_CMockExpect(23, 2);
 
-    led_turn_on_CMockExpect(25, 3);
+    led_turn_on_CMockExpect(24, 3);
 
 
 
@@ -58,13 +56,13 @@ void test_bar_graph_0_percent_all_off(void)
 
 {
 
-    led_turn_off_CMockExpect(32, 0);
+    led_turn_off_CMockExpect(31, 0);
 
-    led_turn_off_CMockExpect(33, 1);
+    led_turn_off_CMockExpect(32, 1);
 
-    led_turn_off_CMockExpect(34, 2);
+    led_turn_off_CMockExpect(33, 2);
 
-    led_turn_off_CMockExpect(35, 3);
+    led_turn_off_CMockExpect(34, 3);
 
 
 
@@ -84,13 +82,13 @@ void test_bar_graph_0_percent2_all_off(void)
 
 {
 
-    led_turn_off_CMockExpect(45, 0);
+    led_turn_off_CMockExpect(44, 0);
 
-    led_turn_off_CMockExpect(46, 1);
+    led_turn_off_CMockExpect(45, 1);
 
-    led_turn_off_CMockExpect(47, 2);
+    led_turn_off_CMockExpect(46, 2);
 
-    led_turn_off_CMockExpect(48, 3);
+    led_turn_off_CMockExpect(47, 3);
 
 
 
@@ -104,13 +102,13 @@ void test_bar_graph_25_percent2_one_on(void)
 
 {
 
-    led_turn_on_CMockExpect(55, 0);
+    led_turn_on_CMockExpect(54, 0);
 
-    led_turn_off_CMockExpect(56, 1);
+    led_turn_off_CMockExpect(55, 1);
 
-    led_turn_off_CMockExpect(57, 2);
+    led_turn_off_CMockExpect(56, 2);
 
-    led_turn_off_CMockExpect(58, 3);
+    led_turn_off_CMockExpect(57, 3);
 
 
 
@@ -124,13 +122,13 @@ void test_bar_graph_50_percent2_two_on(void)
 
 {
 
-    led_turn_on_CMockExpect(65, 0);
+    led_turn_on_CMockExpect(64, 0);
 
-    led_turn_on_CMockExpect(66, 1);
+    led_turn_on_CMockExpect(65, 1);
 
-    led_turn_off_CMockExpect(67, 2);
+    led_turn_off_CMockExpect(66, 2);
 
-    led_turn_off_CMockExpect(68, 3);
+    led_turn_off_CMockExpect(67, 3);
 
 
 
@@ -144,13 +142,13 @@ void test_bar_graph_75_percent2_tree_on(void)
 
 {
 
-    led_turn_on_CMockExpect(75, 0);
+    led_turn_on_CMockExpect(74, 0);
 
-    led_turn_on_CMockExpect(76, 1);
+    led_turn_on_CMockExpect(75, 1);
 
-    led_turn_on_CMockExpect(77, 2);
+    led_turn_on_CMockExpect(76, 2);
 
-    led_turn_off_CMockExpect(78, 3);
+    led_turn_off_CMockExpect(77, 3);
 
 
 
@@ -158,17 +156,17 @@ void test_bar_graph_75_percent2_tree_on(void)
 
 }
 
-void test_bar_graph_75_percent2_all_on(void)
+void test_bar_graph_100_percent2_all_on(void)
 
 {
 
-    led_turn_on_CMockExpect(84, 0);
+    led_turn_on_CMockExpect(83, 0);
 
-    led_turn_on_CMockExpect(85, 1);
+    led_turn_on_CMockExpect(84, 1);
 
-    led_turn_on_CMockExpect(86, 2);
+    led_turn_on_CMockExpect(85, 2);
 
-    led_turn_on_CMockExpect(87, 3);
+    led_turn_on_CMockExpect(86, 3);
 
 
 

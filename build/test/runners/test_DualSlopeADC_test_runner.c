@@ -42,7 +42,7 @@ extern void test_bar_graph_0_percent2_all_off(void);
 extern void test_bar_graph_25_percent2_one_on(void);
 extern void test_bar_graph_50_percent2_two_on(void);
 extern void test_bar_graph_75_percent2_tree_on(void);
-extern void test_bar_graph_75_percent2_all_on(void);
+extern void test_bar_graph_100_percent2_all_on(void);
 
 
 /*=======Mock Management=====*/
@@ -78,13 +78,13 @@ void resetTest(void)
 int main(void)
 {
   UnityBegin("test_DualSlopeADC_test.c");
-  RUN_TEST(test_bar_graph_100_percent_all_on, 20);
-  RUN_TEST(test_bar_graph_0_percent_all_off, 30);
-  RUN_TEST(test_bar_graph_0_percent2_all_off, 43);
-  RUN_TEST(test_bar_graph_25_percent2_one_on, 53);
-  RUN_TEST(test_bar_graph_50_percent2_two_on, 63);
-  RUN_TEST(test_bar_graph_75_percent2_tree_on, 73);
-  RUN_TEST(test_bar_graph_75_percent2_all_on, 82);
+  RUN_TEST(test_bar_graph_100_percent_all_on, 19);
+  RUN_TEST(test_bar_graph_0_percent_all_off, 29);
+  RUN_TEST(test_bar_graph_0_percent2_all_off, 42);
+  RUN_TEST(test_bar_graph_25_percent2_one_on, 52);
+  RUN_TEST(test_bar_graph_50_percent2_two_on, 62);
+  RUN_TEST(test_bar_graph_75_percent2_tree_on, 72);
+  RUN_TEST(test_bar_graph_100_percent2_all_on, 81);
 
   CMock_Guts_MemFreeFinal();
   return (UnityEnd());
