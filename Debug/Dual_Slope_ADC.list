@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  000201dc  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0000cc09  00000000  00000000  00020205  2**0
+ 12 .debug_info   0000cc0c  00000000  00000000  00020205  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 00001a7b  00000000  00000000  0002ce0e  2**0
+ 13 .debug_abbrev 00001a54  00000000  00000000  0002ce11  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 00000de8  00000000  00000000  0002e890  2**3
+ 14 .debug_aranges 00000de8  00000000  00000000  0002e868  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00000d30  00000000  00000000  0002f678  2**3
+ 15 .debug_ranges 00000d30  00000000  00000000  0002f650  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  000148f5  00000000  00000000  000303a8  2**0
+ 16 .debug_macro  000148f5  00000000  00000000  00030380  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   0000937c  00000000  00000000  00044c9d  2**0
+ 17 .debug_line   0000937c  00000000  00000000  00044c75  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    00074368  00000000  00000000  0004e019  2**0
+ 18 .debug_str    00074378  00000000  00000000  0004dff1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000c2381  2**0
+ 19 .comment      0000007b  00000000  00000000  000c2369  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000045dc  00000000  00000000  000c23fc  2**2
+ 20 .debug_frame  000045dc  00000000  00000000  000c23e4  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -8917,10 +8917,10 @@ static void UART_SetConfig(UART_HandleTypeDef *huart)
  80038c4:	51eb851f 	.word	0x51eb851f
 
 080038c8 <hardwareInit>:
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
+  * @param  BjtGPIO_Pin: specifies the port bit to be written.
+  *         This parameter can be one of GPIO_PIN_x where x can be (0..15).
+  * @retval None
+  */
 void hardwareInit(GPIO_TypeDef *MuxGPIOx, uint16_t MuxGPIO_Pin, GPIO_TypeDef *BjtGPIOx, uint16_t BjtGPIO_Pin)
 {
  80038c8:	b580      	push	{r7, lr}
@@ -8966,7 +8966,10 @@ void hardwareInit(GPIO_TypeDef *MuxGPIOx, uint16_t MuxGPIO_Pin, GPIO_TypeDef *Bj
  8003916:	bd80      	pop	{r7, pc}
 
 08003918 <convertTimerValueToVoltage>:
-
+  * @param  chargeTimeFix_us: a fix value for capacitor charge Time
+  * 		which is 100us in this charge just put (100).
+  * @retval result voltage value, data type is double.
+  */
 double convertTimerValueToVoltage(float Vref, float dischargeTime_us, float chargeTimeFix_us)
 {
  8003918:	b590      	push	{r4, r7, lr}
@@ -8996,7 +8999,10 @@ double convertTimerValueToVoltage(float Vref, float dischargeTime_us, float char
  800394a:	bd90      	pop	{r4, r7, pc}
 
 0800394c <getCounterValue>:
-
+  *         Channels 3 to Capture Timer value when detect raising edge.
+  * @param  htim TIM IC handle in this case is Timer2.
+  * @retval None
+  */
 void getCounterValue(TIM_HandleTypeDef *htim)
 {
  800394c:	b580      	push	{r7, lr}
@@ -9078,7 +9084,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  80039b4:	f1b3 4f80 	cmp.w	r3, #1073741824	; 0x40000000
  80039b8:	d104      	bne.n	80039c4 <HAL_TIM_PeriodElapsedCallback+0x1c>
 	{
-		i ++;
+		Timer2_overflow++;
  80039ba:	4b05      	ldr	r3, [pc, #20]	; (80039d0 <HAL_TIM_PeriodElapsedCallback+0x28>)
  80039bc:	681b      	ldr	r3, [r3, #0]
  80039be:	3301      	adds	r3, #1
@@ -9142,7 +9148,6 @@ int main(void)
   MX_USART1_UART_Init();
  8003a02:	f000 fa81 	bl	8003f08 <MX_USART1_UART_Init>
   /* USER CODE BEGIN 2 */
-  /* USER CODE BEGIN 2 */
     HAL_TIM_Base_Start_IT(&htim2);
  8003a06:	4829      	ldr	r0, [pc, #164]	; (8003aac <main+0xd8>)
  8003a08:	f7fe fb27 	bl	800205a <HAL_TIM_Base_Start_IT>
@@ -9174,32 +9179,32 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(i >= 2000){
+	if(Timer2_overflow >= 2000)
  8003a3c:	4b1f      	ldr	r3, [pc, #124]	; (8003abc <main+0xe8>)
  8003a3e:	681b      	ldr	r3, [r3, #0]
  8003a40:	f5b3 6ffa 	cmp.w	r3, #2000	; 0x7d0
  8003a44:	d30d      	bcc.n	8003a62 <main+0x8e>
-	  		  hardwareInit(GPIOA, GPIO_PIN_10,GPIOA, GPIO_PIN_11);
+	{
+	  hardwareInit(GPIOA, GPIO_PIN_10,GPIOA, GPIO_PIN_11);
  8003a46:	f44f 6300 	mov.w	r3, #2048	; 0x800
  8003a4a:	4a1b      	ldr	r2, [pc, #108]	; (8003ab8 <main+0xe4>)
  8003a4c:	f44f 6180 	mov.w	r1, #1024	; 0x400
  8003a50:	4819      	ldr	r0, [pc, #100]	; (8003ab8 <main+0xe4>)
  8003a52:	f7ff ff39 	bl	80038c8 <hardwareInit>
-	  		  i = 0;
+	  Timer2_overflow = 0;
  8003a56:	4b19      	ldr	r3, [pc, #100]	; (8003abc <main+0xe8>)
  8003a58:	2200      	movs	r2, #0
  8003a5a:	601a      	str	r2, [r3, #0]
-	  		  IC_Value = 0;
+	  IC_Value = 0;
  8003a5c:	4b18      	ldr	r3, [pc, #96]	; (8003ac0 <main+0xec>)
  8003a5e:	2200      	movs	r2, #0
  8003a60:	601a      	str	r2, [r3, #0]
-	  	  }
-	  	  Result = IC_Value;
+	}
+	  Result = IC_Value;
  8003a62:	4b17      	ldr	r3, [pc, #92]	; (8003ac0 <main+0xec>)
  8003a64:	681b      	ldr	r3, [r3, #0]
  8003a66:	86fb      	strh	r3, [r7, #54]	; 0x36
-
-	  	  voltage = convertTimerValueToVoltage(1, (float)Result ,100);
+	  voltage = convertTimerValueToVoltage(1, (float)Result ,100);
  8003a68:	8efb      	ldrh	r3, [r7, #54]	; 0x36
  8003a6a:	4618      	mov	r0, r3
  8003a6c:	f7fd f8c2 	bl	8000bf4 <__aeabi_ui2f>
@@ -9209,23 +9214,23 @@ int main(void)
  8003a76:	f04f 507e 	mov.w	r0, #1065353216	; 0x3f800000
  8003a7a:	f7ff ff4d 	bl	8003918 <convertTimerValueToVoltage>
  8003a7e:	e9c7 010e 	strd	r0, r1, [r7, #56]	; 0x38
-	  	  sprintf( (char*)str_buff, " Discharge Time is: %d , Voltage : %.2f\n", Result,voltage);
+	  sprintf( (char*)str_buff, " Discharge Time is: %d , Voltage : %.2f\n", Result,voltage);
  8003a82:	8efa      	ldrh	r2, [r7, #54]	; 0x36
  8003a84:	1d38      	adds	r0, r7, #4
  8003a86:	e9d7 340e 	ldrd	r3, r4, [r7, #56]	; 0x38
  8003a8a:	e9cd 3400 	strd	r3, r4, [sp]
  8003a8e:	490e      	ldr	r1, [pc, #56]	; (8003ac8 <main+0xf4>)
  8003a90:	f001 f9da 	bl	8004e48 <siprintf>
-	  	  HAL_UART_Transmit(&huart1, (uint8_t*)str_buff, sizeof(str_buff), 100);
+	  HAL_UART_Transmit(&huart1, (uint8_t*)str_buff, sizeof(str_buff), 100);
  8003a94:	1d39      	adds	r1, r7, #4
  8003a96:	2364      	movs	r3, #100	; 0x64
  8003a98:	2232      	movs	r2, #50	; 0x32
  8003a9a:	480c      	ldr	r0, [pc, #48]	; (8003acc <main+0xf8>)
  8003a9c:	f7ff fd57 	bl	800354e <HAL_UART_Transmit>
-	  	  HAL_Delay (500);
+	  HAL_Delay (500);
  8003aa0:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8003aa4:	f7fd fab0 	bl	8001008 <HAL_Delay>
-	  if(i >= 2000){
+	if(Timer2_overflow >= 2000)
  8003aa8:	e7c8      	b.n	8003a3c <main+0x68>
  8003aaa:	bf00      	nop
  8003aac:	20000324 	.word	0x20000324

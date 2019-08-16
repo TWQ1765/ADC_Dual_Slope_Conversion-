@@ -42,7 +42,7 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 uint32_t IC_Value = 0;
-uint32_t i =0;
+uint32_t Timer2_overflow =0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -75,6 +75,20 @@ double convertTimerValueToVoltage(float Vref, float dischargeTime_us, float char
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+/**
+  * @brief  Initializes the hardware by disable the multiplexer (not receive Vin and Vref) and
+  *         enable the BJT (to input a voltage (3V) to charge up capacitor then
+  *         switch back to multiplexer input ( Vref of capacitor to discharge) by
+  *         enable multiplexer and disable forever the BJT.
+  * @param  MuxGPIOx: where x can be (A..G depending on device used) to select the GPIO peripheral
+  * @param  MuxGPIO_Pin: specifies the port bit to be written.
+  *         This parameter can be one of GPIO_PIN_x where x can be (0..15).
+  * @param  BjtGPIOx: where x can be (A..G depending on device used) to select the GPIO peripheral
+  * @param  BjtGPIO_Pin: specifies the port bit to be written.
+  *         This parameter can be one of GPIO_PIN_x where x can be (0..15).
+  * @retval None
+  */
 void hardwareInit(GPIO_TypeDef *MuxGPIOx, uint16_t MuxGPIO_Pin, GPIO_TypeDef *BjtGPIOx, uint16_t BjtGPIO_Pin)
 {
 
@@ -85,11 +99,33 @@ void hardwareInit(GPIO_TypeDef *MuxGPIOx, uint16_t MuxGPIO_Pin, GPIO_TypeDef *Bj
 	HAL_GPIO_TogglePin(MuxGPIOx, MuxGPIO_Pin);	//enable Multiplexer (select 0 for Vref -1V)
 }
 
+/**
+  * @brief  To calculate the Voltage value base on the fixed capacitor charging time,
+  *         discharging time and the Vref (-1V in this case).
+  *
+  *         Formula:
+  *         dischargeTime			 Vin
+  *         -------------	=	-------------
+  *         chargeTimeFix			-Vref
+  *
+  * @param  Vref: -1V in this case just ignore -VE and put (1).
+  * @param  dischargeTime_us: the value of capacitor discharge in micro second.
+  * @param  chargeTimeFix_us: a fix value for capacitor charge Time
+  * 		which is 100us in this charge just put (100).
+  * @retval result voltage value, data type is double.
+  */
 double convertTimerValueToVoltage(float Vref, float dischargeTime_us, float chargeTimeFix_us)
 {
 	return (((dischargeTime_us*1.0f)/(chargeTimeFix_us*1.0f))*Vref);
 }
 
+/**
+  * @brief  Get Input Capture value according to the specified Channels:
+  *         Channels 2 to reset Timer value when detect falling edge.
+  *         Channels 3 to Capture Timer value when detect raising edge.
+  * @param  htim TIM IC handle in this case is Timer2.
+  * @retval None
+  */
 void getCounterValue(TIM_HandleTypeDef *htim)
 {
 	if (htim -> Channel == HAL_TIM_ACTIVE_CHANNEL_2)// if the interrupt source is channel2(falling edge)
@@ -115,7 +151,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance == TIM2)
 	{
-		i ++;
+		Timer2_overflow++;
 	}
 }
 /* USER CODE END 0 */
@@ -157,7 +193,6 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  /* USER CODE BEGIN 2 */
     HAL_TIM_Base_Start_IT(&htim2);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
@@ -174,18 +209,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(i >= 2000){
-	  		  hardwareInit(GPIOA, GPIO_PIN_10,GPIOA, GPIO_PIN_11);
-	  		  i = 0;
-	  		  IC_Value = 0;
-	  	  }
-	  	  Result = IC_Value;
-
-	  	  voltage = convertTimerValueToVoltage(1, (float)Result ,100);
-	  	  sprintf( (char*)str_buff, " Discharge Time is: %d , Voltage : %.2f\n", Result,voltage);
-	  	  HAL_UART_Transmit(&huart1, (uint8_t*)str_buff, sizeof(str_buff), 100);
-	  	  HAL_Delay (500);
-	    }
+	if(Timer2_overflow >= 2000)
+	{
+	  hardwareInit(GPIOA, GPIO_PIN_10,GPIOA, GPIO_PIN_11);
+	  Timer2_overflow = 0;
+	  IC_Value = 0;
+	}
+	  Result = IC_Value;
+	  voltage = convertTimerValueToVoltage(1, (float)Result ,100);
+	  sprintf( (char*)str_buff, " Discharge Time is: %d , Voltage : %.2f\n", Result,voltage);
+	  HAL_UART_Transmit(&huart1, (uint8_t*)str_buff, sizeof(str_buff), 100);
+	  HAL_Delay (500);
+  }
   /* USER CODE END 3 */
 }
 

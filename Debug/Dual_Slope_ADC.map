@@ -3479,8 +3479,9 @@ LOAD c:/st/stm32cubeide_1.0.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  *(.bss*)
  .bss.IC_Value  0x00000000200001f8        0x4 Src/main.o
                 0x00000000200001f8                IC_Value
- .bss.i         0x00000000200001fc        0x4 Src/main.o
-                0x00000000200001fc                i
+ .bss.Timer2_overflow
+                0x00000000200001fc        0x4 Src/main.o
+                0x00000000200001fc                Timer2_overflow
  .bss.heap_end.5149
                 0x0000000020000200        0x4 Src/sysmem.o
  .bss.__malloc_free_list
@@ -3629,7 +3630,7 @@ LOAD c:/st/stm32cubeide_1.0.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x00000000000008a3       0x1d c:/st/stm32cubeide_1.0.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
 OUTPUT(Dual_Slope_ADC.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xcc09
+.debug_info     0x0000000000000000     0xcc0c
  .debug_info    0x0000000000000000      0x6fe Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .debug_info    0x00000000000006fe      0xb46 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_info    0x0000000000001244      0x681 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -3638,14 +3639,14 @@ OUTPUT(Dual_Slope_ADC.elf elf32-littlearm)
  .debug_info    0x0000000000004520     0x2456 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_info    0x0000000000006976     0x1104 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_info    0x0000000000007a7a     0x11e3 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_info    0x0000000000008c5d     0x1ad1 Src/main.o
- .debug_info    0x000000000000a72e     0x10ce Src/stm32f1xx_hal_msp.o
- .debug_info    0x000000000000b7fc      0x698 Src/stm32f1xx_it.o
- .debug_info    0x000000000000be94      0x91c Src/sysmem.o
- .debug_info    0x000000000000c7b0      0x437 Src/system_stm32f1xx.o
- .debug_info    0x000000000000cbe7       0x22 Startup/startup_stm32f103c8tx.o
+ .debug_info    0x0000000000008c5d     0x1ad4 Src/main.o
+ .debug_info    0x000000000000a731     0x10ce Src/stm32f1xx_hal_msp.o
+ .debug_info    0x000000000000b7ff      0x698 Src/stm32f1xx_it.o
+ .debug_info    0x000000000000be97      0x91c Src/sysmem.o
+ .debug_info    0x000000000000c7b3      0x437 Src/system_stm32f1xx.o
+ .debug_info    0x000000000000cbea       0x22 Startup/startup_stm32f103c8tx.o
 
-.debug_abbrev   0x0000000000000000     0x1a7b
+.debug_abbrev   0x0000000000000000     0x1a54
  .debug_abbrev  0x0000000000000000      0x1d8 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
  .debug_abbrev  0x00000000000001d8      0x2d5 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
  .debug_abbrev  0x00000000000004ad      0x1c0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
@@ -3654,12 +3655,12 @@ OUTPUT(Dual_Slope_ADC.elf elf32-littlearm)
  .debug_abbrev  0x0000000000000b08      0x230 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_abbrev  0x0000000000000d38      0x21e Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_abbrev  0x0000000000000f56      0x242 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_abbrev  0x0000000000001198      0x2aa Src/main.o
- .debug_abbrev  0x0000000000001442      0x1de Src/stm32f1xx_hal_msp.o
- .debug_abbrev  0x0000000000001620      0x15a Src/stm32f1xx_it.o
- .debug_abbrev  0x000000000000177a      0x1bb Src/sysmem.o
- .debug_abbrev  0x0000000000001935      0x134 Src/system_stm32f1xx.o
- .debug_abbrev  0x0000000000001a69       0x12 Startup/startup_stm32f103c8tx.o
+ .debug_abbrev  0x0000000000001198      0x283 Src/main.o
+ .debug_abbrev  0x000000000000141b      0x1de Src/stm32f1xx_hal_msp.o
+ .debug_abbrev  0x00000000000015f9      0x15a Src/stm32f1xx_it.o
+ .debug_abbrev  0x0000000000001753      0x1bb Src/sysmem.o
+ .debug_abbrev  0x000000000000190e      0x134 Src/system_stm32f1xx.o
+ .debug_abbrev  0x0000000000001a42       0x12 Startup/startup_stm32f103c8tx.o
 
 .debug_aranges  0x0000000000000000      0xde8
  .debug_aranges
@@ -3799,7 +3800,7 @@ OUTPUT(Dual_Slope_ADC.elf elf32-littlearm)
  .debug_line    0x0000000000008c89      0x674 Src/system_stm32f1xx.o
  .debug_line    0x00000000000092fd       0x7f Startup/startup_stm32f103c8tx.o
 
-.debug_str      0x0000000000000000    0x74368
+.debug_str      0x0000000000000000    0x74378
  .debug_str     0x0000000000000000    0x6c543 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
                                       0x6c87d (size before relaxing)
  .debug_str     0x000000000006c543      0x326 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
@@ -3816,17 +3817,17 @@ OUTPUT(Dual_Slope_ADC.elf elf32-littlearm)
                                       0x6cbba (size before relaxing)
  .debug_str     0x000000000006f43a      0x6c0 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
                                       0x6cade (size before relaxing)
- .debug_str     0x000000000006fafa     0x41ff Src/main.o
-                                      0x71016 (size before relaxing)
- .debug_str     0x0000000000073cf9       0x41 Src/stm32f1xx_hal_msp.o
+ .debug_str     0x000000000006fafa     0x420f Src/main.o
+                                      0x71026 (size before relaxing)
+ .debug_str     0x0000000000073d09       0x41 Src/stm32f1xx_hal_msp.o
                                       0x6cde3 (size before relaxing)
- .debug_str     0x0000000000073d3a       0xc8 Src/stm32f1xx_it.o
+ .debug_str     0x0000000000073d4a       0xc8 Src/stm32f1xx_it.o
                                       0x6c5e5 (size before relaxing)
- .debug_str     0x0000000000073e02      0x4cc Src/sysmem.o
+ .debug_str     0x0000000000073e12      0x4cc Src/sysmem.o
                                        0x7ab2 (size before relaxing)
- .debug_str     0x00000000000742ce       0x69 Src/system_stm32f1xx.o
+ .debug_str     0x00000000000742de       0x69 Src/system_stm32f1xx.o
                                       0x6c267 (size before relaxing)
- .debug_str     0x0000000000074337       0x31 Startup/startup_stm32f103c8tx.o
+ .debug_str     0x0000000000074347       0x31 Startup/startup_stm32f103c8tx.o
                                          0x57 (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
