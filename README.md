@@ -43,25 +43,36 @@
 1.4 Result:
 ------------
 - When Vin = 1.28 V:
+
  ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6167d4eb94f19ed1e073e9a21ba9eabb/image.png)
+
  ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/636e81167e7e5fde19149f295f4b3b04/image.png)
+
  ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5ead078ae39ec2e9076144e65beb433/image.png)
 
 - When Vin = 2 V:
+
  ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6c4c5db1fa15ed7fbc6dce73701da6c3/image.png)
+
  ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f35d5748eb319cb7e3c76f76573cd668/image.png)
- ![console]()
+
+ ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/77277a23187c7c9a03c18992566a811a/image.png)
 
 - When Vin = 3 V:
+
  ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f9997fd33c2eeb80c7982fac0db992e1/image.png)
- ![wave2]()
- ![console]()
+
+ ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5eeed6ec47a302f1da12845d3acc2a3/image.png)
+
+ ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c4cc4812a40b3f5b3223954d0fc2b334/image.png)
+
 -  When Vin = 4.3 V (maximum voltage):
 
- ![wave1])
- ![wave2]()
- ![console]()
--  When Vin = 4.3 V (maximum voltage):
+ ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/53f929eb94369e6391a9b36dfe708a02/image.png)
+
+ ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c845bae5606c08dc5dfbb3e60cc223e7/image.png)
+
+ ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/ed6d3d862f9df2f3d12e1c6ff063da0a/image.png)
 
 1.5 Summary:
 ----------------
