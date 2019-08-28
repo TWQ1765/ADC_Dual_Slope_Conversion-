@@ -7,7 +7,7 @@
 
 1.2 Circuit Diagram:
 ----------------------
-![circuit](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/b0c93766a30c6b769bad6885b2c8d8fc/image.png) 
+![circuit](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/b0c93766a30c6b769bad6885b2c8d8fc/image.png){:height="700px" width="400px"} 
 
 
 1.3 Software Configuration:
