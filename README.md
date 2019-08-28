@@ -22,12 +22,13 @@
  - Timer 2 [input capture capacitor discharge time]:
 ![ic](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c41709c129fafa105d939433ce711294/image.png)
 
- - Timer 3 [one pulse mode generate] :
+- Timer 3 [one pulse mode generate] :
 ![one ](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f76e520ea8a6fc475c53f26e7d695171/image.png)
 
- - USART1 [Serial transfer between PC and MCU for console display]:
-![gpio](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d4baec290c24339d8f0fe49/2f729fd88430a19d12bff5ef69c0af46/image.png)
- - I2C1 (optional) [for OLED or LCD display purpose]:
+- USART1 [Serial transfer between PC and MCU for console display]:
+ ![gpio](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d4baec290c24339d8f0fe49/2f729fd88430a19d12bff5ef69c0af46/image.png)
+ 
+- I2C1 (optional) [for OLED or LCD display purpose]:
 ![i2c](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d4baec290c24339d8f0fe49/a125e7c3944db78e1c344959a1a0c9f2/image.png)
 
 - GPIO(PA10 & PA11)Configuration
@@ -43,27 +44,27 @@
 ------------
 - When Vin = 1.28 V:
 
- ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6167d4eb94f19ed1e073e9a21ba9eabb/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6167d4eb94f19ed1e073e9a21ba9eabb/image.png" width="500">
 
- ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/636e81167e7e5fde19149f295f4b3b04/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/636e81167e7e5fde19149f295f4b3b04/image.png" width="500">
 
- ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5ead078ae39ec2e9076144e65beb433/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5ead078ae39ec2e9076144e65beb433/image.png" width="300">
 
 - When Vin = 2 V:
 
- ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6c4c5db1fa15ed7fbc6dce73701da6c3/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6c4c5db1fa15ed7fbc6dce73701da6c3/image.png" width="500">
 
- ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f35d5748eb319cb7e3c76f76573cd668/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f35d5748eb319cb7e3c76f76573cd668/image.png" width="500">
 
- ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/77277a23187c7c9a03c18992566a811a/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/77277a23187c7c9a03c18992566a811a/image.png" width="300">
 
 - When Vin = 3 V:
 
- ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f9997fd33c2eeb80c7982fac0db992e1/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/f9997fd33c2eeb80c7982fac0db992e1/image.png" width="500">
 
- ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5eeed6ec47a302f1da12845d3acc2a3/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5eeed6ec47a302f1da12845d3acc2a3/image.png" width="500">
 
- ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c4cc4812a40b3f5b3223954d0fc2b334/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c4cc4812a40b3f5b3223954d0fc2b334/image.png" width="300">
 
 -  When Vin = 4.3 V (maximum voltage):
 
