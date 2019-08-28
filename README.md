@@ -13,12 +13,15 @@
 1.3 Theory:
 --------------
 Dual Slope ADC Calculation and defining integrator circuit:
+
 - general circuit diagram:
 ![circuit diagram](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5cef9fd7a8c02d75df38225e/d5d0e55ced4b5b29260efffec3f8445c/image.png)
-                                                Fig: Dual slope ADC [1]
+                                               
 - Defining integrator circuit:
 
 ![circuit diagram](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5cef9fd7a8c02d75df38225e/6be594e7d17f74f358c250b45c4ca3e4/image.png)
+
+**type error: Ix = If'
 
 ![cal1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5cef9fd7a8c02d75df38225e/ee3cb2c6396265e5796156f112047849/image.png)
 ![cal2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5cef9fd7a8c02d75df38225e/fff0da76b3fd7373ba4452635f1ca4c1/image.png)
