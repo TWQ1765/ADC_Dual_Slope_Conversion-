@@ -45,9 +45,9 @@
 ------------
 - When Vin = 1.28 V:
 
-<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6167d4eb94f19ed1e073e9a21ba9eabb/image.png" width="500">
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/6167d4eb94f19ed1e073e9a21ba9eabb/image.png" width="400">
 
-<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/636e81167e7e5fde19149f295f4b3b04/image.png" width="500">
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/636e81167e7e5fde19149f295f4b3b04/image.png" width="400">
 
 <img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/d5ead078ae39ec2e9076144e65beb433/image.png" width="300">
 
