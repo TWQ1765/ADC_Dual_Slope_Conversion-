@@ -9,7 +9,6 @@
 ----------------------
 ![circuit](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/b0c93766a30c6b769bad6885b2c8d8fc/image.png )
 
-
 1.3 Software Configuration:
 -------------------------------
 - CubeMx config:
@@ -68,11 +67,13 @@
 
 -  When Vin = 4.3 V (maximum voltage):
 
- ![wave1](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/53f929eb94369e6391a9b36dfe708a02/image.png)
+ <img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/53f929eb94369e6391a9b36dfe708a02/image.png" width="500">
+ 
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c845bae5606c08dc5dfbb3e60cc223e7/image.png" width="500">
 
- ![wave2](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c845bae5606c08dc5dfbb3e60cc223e7/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/c845bae5606c08dc5dfbb3e60cc223e7/image.png" width="500">
 
- ![console](https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/ed6d3d862f9df2f3d12e1c6ff063da0a/image.png)
+<img src="https://trello-attachments.s3.amazonaws.com/5cee4774d8fcdd32c2d51358/5d553ea56cb12a2d7b1a3c06/ed6d3d862f9df2f3d12e1c6ff063da0a/image.png" width="300">
 
 1.5 Summary:
 ----------------
